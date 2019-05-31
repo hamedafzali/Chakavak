@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9439F86-5478-42A3-B460-E821343739DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Chakavak.My.MyApplication</StartupObject>
+    <RootNamespace>Chakavak</RootNamespace>
+    <AssemblyName>Chakavak</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\192.168.101.93\c%24\Users\Administrator\Desktop\chakavak\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Chakavak.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Chakavak.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F989A739E59AF282A42CBB0F839BC00BC12F96F9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Chakavak_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.JSON.2">
+      <HintPath>..\..\..\..\..\Desktop\9.2.17.1_DLL\AjaxPro.JSON.2.dll</HintPath>
+    </Reference>
+    <Reference Include="amqmdnet, Version=7.1.0.1, Culture=neutral, PublicKeyToken=dd3cb1c9aae9ec97, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\IBM\WebSphere MQ\bin\amqmdnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Conversion">
+      <HintPath>..\..\..\..\..\Desktop\Conversion.dll</HintPath>
+    </Reference>
+    <Reference Include="ConvertXML">
+      <HintPath>..\..\..\..\..\Desktop\ConvertXML.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\develop tools\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\Desktop\Json80r3\Bin\Net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankList.Designer.vb">
+      <DependentUpon>BankList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchList.Designer.vb">
+      <DependentUpon>BranchList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BranchList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChakavakAdminForm.Designer.vb">
+      <DependentUpon>ChakavakAdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChakavakAdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChakavakSummery.Designer.vb">
+      <DependentUpon>ChakavakSummery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChakavakSummery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chequeSchema.vb" />
+    <Compile Include="ClientClass.vb" />
+    <Compile Include="Document.Designer.vb">
+      <DependentUpon>Document.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Document.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentRiser.Designer.vb">
+      <DependentUpon>DocumentRiser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentRiser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSTMT.Designer.vb">
+      <DependentUpon>frmSTMT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSTMT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalClass.vb" />
+    <Compile Include="InformationSchema.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RejectedReport.Designer.vb">
+      <DependentUpon>RejectedReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RejectedReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetrunChakavak.Designer.vb">
+      <DependentUpon>RetrunChakavak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RetrunChakavak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerClass.vb" />
+    <Compile Include="ServerScanner.vb" />
+    <Compile Include="Service References\ChakavakServiceWS\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FarazService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SharedModule.vb" />
+    <Compile Include="SimiaVarizReport.Designer.vb">
+      <DependentUpon>SimiaVarizReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SimiaVarizReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stmtClass.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BankList.resx">
+      <DependentUpon>BankList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BranchList.resx">
+      <DependentUpon>BranchList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChakavakAdminForm.resx">
+      <DependentUpon>ChakavakAdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChakavakSummery.resx">
+      <DependentUpon>ChakavakSummery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document.resx">
+      <DependentUpon>Document.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentRiser.resx">
+      <DependentUpon>DocumentRiser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSTMT.resx">
+      <DependentUpon>frmSTMT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RejectedReport.resx">
+      <DependentUpon>RejectedReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetrunChakavak.resx">
+      <DependentUpon>RetrunChakavak.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimiaVarizReport.resx">
+      <DependentUpon>SimiaVarizReport.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chakavak_TemporaryKey.pfx" />
+    <None Include="log4net.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ChakavakServiceWS\Chakavak.ChakavakServiceWS.Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FarazService\publicservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mqic32.dll" />
+    <None Include="Service References\FarazService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\FarazService\configuration.svcinfo" />
+    <None Include="Service References\FarazService\configuration91.svcinfo" />
+    <None Include="Service References\FarazService\publicservice.disco" />
+    <None Include="Service References\ChakavakServiceWS\ChakavakService1.wsdl" />
+    <None Include="Service References\ChakavakServiceWS\ChakavakService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ChakavakServiceWS\ChakavakService61.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ChakavakServiceWS\ChakavakService62.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ChakavakServiceWS\ChakavakService63.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ChakavakServiceWS\ChakavakService64.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ChakavakServiceWS\ChakavakService65.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ChakavakServiceWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\ChakavakServiceWS\configuration.svcinfo" />
+    <None Include="Service References\ChakavakServiceWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ChakavakServiceWS\" />
+    <WCFMetadataStorage Include="Service References\FarazService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/com.cbi.chakavak.chequeSchema" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/com.cbi.chakavak.chequeSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Header">
+    <xs:sequence>
+      <xs:element name="amountField" nillable="true" type="xs:string" />
+      <xs:element name="chequeIDField" nillable="true" type="xs:string" />
+      <xs:element name="depositDateField" nillable="true" type="xs:string" />
+      <xs:element name="settlementDateField" nillable="true" type="xs:string" />
+      <xs:element name="userNameField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Header" nillable="true" type="tns:Header" />
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element name="amendatoryField" type="xs:boolean" />
+      <xs:element name="creditorField" nillable="true" type="tns:Creditor" />
+      <xs:element name="debtorField" nillable="true" type="tns:Debtor" />
+      <xs:element name="nonPaymentCertificateField" nillable="true" type="tns:NonPaymentCertificate" />
+      <xs:element name="reasonField" nillable="true" type="xs:string" />
+      <xs:element name="seqNoField" nillable="true" type="xs:string" />
+      <xs:element name="statusField" nillable="true" type="xs:string" />
+      <xs:element name="submitterField" nillable="true" type="xs:string" />
+      <xs:element name="tRNField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:complexType name="Creditor">
+    <xs:sequence>
+      <xs:element name="bICField" nillable="true" type="xs:string" />
+      <xs:element name="branchCodeField" nillable="true" type="xs:string" />
+      <xs:element name="iBANField" nillable="true" type="xs:string" />
+      <xs:element name="nameField" nillable="true" type="xs:string" />
+      <xs:element name="nationalCodeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Creditor" nillable="true" type="tns:Creditor" />
+  <xs:complexType name="Debtor">
+    <xs:sequence>
+      <xs:element name="bICField" nillable="true" type="xs:string" />
+      <xs:element name="branchCodeField" nillable="true" type="xs:string" />
+      <xs:element name="iBANField" nillable="true" type="xs:string" />
+      <xs:element name="nameField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Debtor" nillable="true" type="tns:Debtor" />
+  <xs:complexType name="NonPaymentCertificate">
+    <xs:sequence>
+      <xs:element name="authorisedField" nillable="true" type="tns:ArrayOfAuthorised" />
+      <xs:element name="chequeIssuerField" nillable="true" type="tns:ChequeIssuer" />
+      <xs:element name="otherAuthorisedField" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NonPaymentCertificate" nillable="true" type="tns:NonPaymentCertificate" />
+  <xs:complexType name="ArrayOfAuthorised">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Authorised" nillable="true" type="tns:Authorised" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAuthorised" nillable="true" type="tns:ArrayOfAuthorised" />
+  <xs:complexType name="Authorised">
+    <xs:sequence>
+      <xs:element name="address1Field" nillable="true" type="xs:string" />
+      <xs:element name="birthCertNumOrRegNumField" nillable="true" type="xs:string" />
+      <xs:element name="birthDateOrRegDateField" nillable="true" type="xs:string" />
+      <xs:element name="fatherNameField" nillable="true" type="xs:string" />
+      <xs:element name="fullNameField" nillable="true" type="xs:string" />
+      <xs:element name="issueLocationOrRegLocationField" nillable="true" type="xs:string" />
+      <xs:element name="locationCodeField" nillable="true" type="xs:string" />
+      <xs:element name="nationalIDField" nillable="true" type="xs:string" />
+      <xs:element name="officeCodeField" nillable="true" type="xs:string" />
+      <xs:element name="postalCode1Field" nillable="true" type="xs:string" />
+      <xs:element name="referToField" nillable="true" type="xs:string" />
+      <xs:element name="tel1Field" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Authorised" nillable="true" type="tns:Authorised" />
+  <xs:complexType name="ChequeIssuer">
+    <xs:sequence>
+      <xs:element name="accountTypeField" nillable="true" type="xs:string" />
+      <xs:element name="address1Field" nillable="true" type="xs:string" />
+      <xs:element name="address2Field" nillable="true" type="xs:string" />
+      <xs:element name="birthCertNumOrRegNumField" nillable="true" type="xs:string" />
+      <xs:element name="birthDateOrRegDateField" nillable="true" type="xs:string" />
+      <xs:element name="curAccBalField" type="xs:decimal" />
+      <xs:element name="curAccBalFieldSpecified" type="xs:boolean" />
+      <xs:element name="fatherNameField" nillable="true" type="xs:string" />
+      <xs:element name="isSettledField" type="xs:boolean" />
+      <xs:element name="issueLocationOrRegLocationField" nillable="true" type="xs:string" />
+      <xs:element name="locationCodeField" nillable="true" type="xs:string" />
+      <xs:element name="nameField" nillable="true" type="xs:string" />
+      <xs:element name="nationalIDField" nillable="true" type="xs:string" />
+      <xs:element name="officeCodeField" nillable="true" type="xs:string" />
+      <xs:element name="onIssueDateAccBalField" nillable="true" type="xs:decimal" />
+      <xs:element name="postalCode1Field" nillable="true" type="xs:string" />
+      <xs:element name="postalCode2Field" nillable="true" type="xs:string" />
+      <xs:element name="referToField" nillable="true" type="xs:string" />
+      <xs:element name="tel1Field" nillable="true" type="xs:string" />
+      <xs:element name="tel2Field" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChequeIssuer" nillable="true" type="tns:ChequeIssuer" />
+  <xs:complexType name="Request">
+    <xs:sequence>
+      <xs:element name="codedField" type="xs:boolean" />
+      <xs:element name="creditorField" nillable="true" type="tns:Creditor" />
+      <xs:element name="debtorField" nillable="true" type="tns:Debtor" />
+      <xs:element name="instrIdField" nillable="true" type="xs:string" />
+      <xs:element name="partialSettlementField" type="xs:boolean" />
+      <xs:element name="partialSettlementFieldSpecified" type="xs:boolean" />
+      <xs:element name="priorityField" nillable="true" type="xs:string" />
+      <xs:element name="prominentStampField" type="xs:boolean" />
+      <xs:element name="regressiveField" nillable="true" type="xs:string" />
+      <xs:element name="requestDataField" nillable="true" type="tns:RequestData" />
+      <xs:element name="seqNoField" nillable="true" type="xs:string" />
+      <xs:element name="submitterField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Request" nillable="true" type="tns:Request" />
+  <xs:complexType name="RequestData">
+    <xs:sequence>
+      <xs:element name="backField" nillable="true" type="xs:base64Binary" />
+      <xs:element name="frontField" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestData" nillable="true" type="tns:RequestData" />
+</xs:schema>

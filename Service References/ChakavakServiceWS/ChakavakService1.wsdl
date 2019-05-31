@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ChakavakService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/com.cbi.chakavak.chequeSchema" />
+      <xsd:import schemaLocation="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/CommonObject" />
+      <xsd:import schemaLocation="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IChakavakService_PutResponseOutChequeResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutResponseOutChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_PutResponseOutChequeResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutResponseOutChequeResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_PutRequestOutChequeRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutRequestOutChequeRequest" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_PutRequestOutChequeRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutRequestOutChequeRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetRequestInChequeRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestInChequeRequest" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetRequestInChequeRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestInChequeRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetResponseInChequeResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResponseInChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetResponseInChequeResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResponseInChequeResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetRequestInAcknowledge_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestInAcknowledge" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetRequestInAcknowledge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestInAcknowledgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetRequestInAcknowledgeNotProcessed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestInAcknowledgeNotProcessed" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetRequestInAcknowledgeNotProcessed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestInAcknowledgeNotProcessedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetResponseInAcknowledgeNotProcessed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResponseInAcknowledgeNotProcessed" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetResponseInAcknowledgeNotProcessed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResponseInAcknowledgeNotProcessedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetInformationSchemaNotProcessed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInformationSchemaNotProcessed" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_GetInformationSchemaNotProcessed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInformationSchemaNotProcessedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_UpdateRequestInItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRequestInItems" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_UpdateRequestInItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRequestInItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_UpdateRequestInItemsBySeqNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRequestInItemsBySeqNo" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_UpdateRequestInItemsBySeqNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRequestInItemsBySeqNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_UpdateResponseInItemsBySeqNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponseInItemsBySeqNo" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_UpdateResponseInItemsBySeqNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponseInItemsBySeqNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_UpdateRequestInAcknowledgeItemsByTRN_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRequestInAcknowledgeItemsByTRN" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_UpdateRequestInAcknowledgeItemsByTRN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRequestInAcknowledgeItemsByTRNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_UpdateResponseInAcknowledgeItemsByTRN_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponseInAcknowledgeItemsByTRN" />
+  </wsdl:message>
+  <wsdl:message name="IChakavakService_UpdateResponseInAcknowledgeItemsByTRN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponseInAcknowledgeItemsByTRNResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IChakavakService">
+    <wsdl:operation name="PutResponseOutChequeResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/PutResponseOutChequeResponse" message="tns:IChakavakService_PutResponseOutChequeResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/PutResponseOutChequeResponseResponse" message="tns:IChakavakService_PutResponseOutChequeResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutRequestOutChequeRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/PutRequestOutChequeRequest" message="tns:IChakavakService_PutRequestOutChequeRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/PutRequestOutChequeRequestResponse" message="tns:IChakavakService_PutRequestOutChequeRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInChequeRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/GetRequestInChequeRequest" message="tns:IChakavakService_GetRequestInChequeRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/GetRequestInChequeRequestResponse" message="tns:IChakavakService_GetRequestInChequeRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponseInChequeResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/GetResponseInChequeResponse" message="tns:IChakavakService_GetResponseInChequeResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/GetResponseInChequeResponseResponse" message="tns:IChakavakService_GetResponseInChequeResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInAcknowledge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/GetRequestInAcknowledge" message="tns:IChakavakService_GetRequestInAcknowledge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/GetRequestInAcknowledgeResponse" message="tns:IChakavakService_GetRequestInAcknowledge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInAcknowledgeNotProcessed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/GetRequestInAcknowledgeNotProcessed" message="tns:IChakavakService_GetRequestInAcknowledgeNotProcessed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/GetRequestInAcknowledgeNotProcessedResponse" message="tns:IChakavakService_GetRequestInAcknowledgeNotProcessed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponseInAcknowledgeNotProcessed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/GetResponseInAcknowledgeNotProcessed" message="tns:IChakavakService_GetResponseInAcknowledgeNotProcessed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/GetResponseInAcknowledgeNotProcessedResponse" message="tns:IChakavakService_GetResponseInAcknowledgeNotProcessed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInformationSchemaNotProcessed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/GetInformationSchemaNotProcessed" message="tns:IChakavakService_GetInformationSchemaNotProcessed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/GetInformationSchemaNotProcessedResponse" message="tns:IChakavakService_GetInformationSchemaNotProcessed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRequestInItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/UpdateRequestInItems" message="tns:IChakavakService_UpdateRequestInItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/UpdateRequestInItemsResponse" message="tns:IChakavakService_UpdateRequestInItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRequestInItemsBySeqNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/UpdateRequestInItemsBySeqNo" message="tns:IChakavakService_UpdateRequestInItemsBySeqNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/UpdateRequestInItemsBySeqNoResponse" message="tns:IChakavakService_UpdateRequestInItemsBySeqNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResponseInItemsBySeqNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/UpdateResponseInItemsBySeqNo" message="tns:IChakavakService_UpdateResponseInItemsBySeqNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/UpdateResponseInItemsBySeqNoResponse" message="tns:IChakavakService_UpdateResponseInItemsBySeqNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRequestInAcknowledgeItemsByTRN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/UpdateRequestInAcknowledgeItemsByTRN" message="tns:IChakavakService_UpdateRequestInAcknowledgeItemsByTRN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/UpdateRequestInAcknowledgeItemsByTRNResponse" message="tns:IChakavakService_UpdateRequestInAcknowledgeItemsByTRN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResponseInAcknowledgeItemsByTRN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChakavakService/UpdateResponseInAcknowledgeItemsByTRN" message="tns:IChakavakService_UpdateResponseInAcknowledgeItemsByTRN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChakavakService/UpdateResponseInAcknowledgeItemsByTRNResponse" message="tns:IChakavakService_UpdateResponseInAcknowledgeItemsByTRN_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IChakavakService" type="tns:IChakavakService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PutResponseOutChequeResponse">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/PutResponseOutChequeResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutRequestOutChequeRequest">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/PutRequestOutChequeRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInChequeRequest">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/GetRequestInChequeRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponseInChequeResponse">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/GetResponseInChequeResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInAcknowledge">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/GetRequestInAcknowledge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInAcknowledgeNotProcessed">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/GetRequestInAcknowledgeNotProcessed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponseInAcknowledgeNotProcessed">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/GetResponseInAcknowledgeNotProcessed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInformationSchemaNotProcessed">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/GetInformationSchemaNotProcessed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRequestInItems">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/UpdateRequestInItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRequestInItemsBySeqNo">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/UpdateRequestInItemsBySeqNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResponseInItemsBySeqNo">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/UpdateResponseInItemsBySeqNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRequestInAcknowledgeItemsByTRN">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/UpdateRequestInAcknowledgeItemsByTRN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResponseInAcknowledgeItemsByTRN">
+      <soap:operation soapAction="http://tempuri.org/IChakavakService/UpdateResponseInAcknowledgeItemsByTRN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ChakavakService">
+    <wsdl:port name="BasicHttpBinding_IChakavakService" binding="tns:BasicHttpBinding_IChakavakService">
+      <soap:address location="http://192.168.13.184/ChakavakService/ChakavakService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

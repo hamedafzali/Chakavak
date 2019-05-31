@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/PBIService/PublicService" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://tempuri.org/PBIService/PublicService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/PBIService/PublicService">
+      <s:element name="GetAccountByIBAN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iban" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountByIBANResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountByIBANResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAccountByIBANSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountByIBAN" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountByIBANSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountByIBANResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PublicServiceSoap">
+    <wsdl:operation name="GetAccountByIBAN">
+      <wsdl:input message="tns:GetAccountByIBANSoapIn" />
+      <wsdl:output message="tns:GetAccountByIBANSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PublicServiceSoap" type="tns:PublicServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAccountByIBAN">
+      <soap:operation soapAction="http://tempuri.org/PBIService/PublicService/GetAccountByIBAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PublicService">
+    <wsdl:port name="PublicServiceSoap" binding="tns:PublicServiceSoap">
+      <soap:address location="http://192.168.5.200/pbiservice/publicservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

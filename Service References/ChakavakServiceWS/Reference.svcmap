@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8e75e8c9-2229-412b-97a7-31eb685b6cb8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.13.184/ChakavakService/ChakavakService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ChakavakService1.wsdl" MetadataType="Wsdl" ID="09857bcd-23a0-4a0c-95ad-413c0bff4af1" SourceId="1" SourceUrl="http://192.168.13.184/ChakavakService/ChakavakService.svc?wsdl" />
+    <MetadataFile FileName="ChakavakService6.xsd" MetadataType="Schema" ID="2473ff43-6e27-4007-ac8e-9043bdfd3488" SourceId="1" SourceUrl="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ChakavakService61.xsd" MetadataType="Schema" ID="62dbf3f5-38b7-4a85-a966-8a42a4138df7" SourceId="1" SourceUrl="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ChakavakService62.xsd" MetadataType="Schema" ID="07c2d68b-7759-43f1-9cbc-27f27f0b58c6" SourceId="1" SourceUrl="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ChakavakService63.xsd" MetadataType="Schema" ID="7ba1d728-25b7-4a27-a886-fe1126808d5f" SourceId="1" SourceUrl="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ChakavakService64.xsd" MetadataType="Schema" ID="5a597021-da77-4456-aa9c-02d7dd908746" SourceId="1" SourceUrl="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ChakavakService65.xsd" MetadataType="Schema" ID="ae3980f9-f6f3-486b-8b97-cb294f5a24e4" SourceId="1" SourceUrl="http://192.168.13.184/ChakavakService/ChakavakService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
